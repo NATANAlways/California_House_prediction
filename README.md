@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### California Housing Prediction
 
 ### Software and Tools Requirements
@@ -15,3 +16,6 @@ Create a new Environment
     conda create -p venv python -y
 '''
 
+=======
+# California_House_prediction
+>>>>>>> bc18fe5d604f93dda8d604666ca02a9ce74c6918
