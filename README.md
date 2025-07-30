@@ -46,13 +46,13 @@ This project is a **web-based machine learning application** that predicts Calif
 
 California_House_Price/
 │
-├── app.py                 # Flask web server
-├── regmodel.pkl           # Trained regression model
-├── scaling.pkl            # StandardScaler instance
-├── requirements.txt       # Dependencies
+├── app.py # Flask web server
+├── regmodel.pkl # Trained regression model
+├── scaling.pkl # StandardScaler instance
+├── requirements.txt # Dependencies
 ├── templates/
-│   └── home.html          # Web form for user input
-└── Untitled75.ipynb       # Jupyter Notebook for EDA + model training
+│ └── home.html # Web form for user input
+└── Untitled75.ipynb # Jupyter Notebook for EDA + model training
 
 ## Working Sample
 
