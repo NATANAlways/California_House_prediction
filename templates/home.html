@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>California House Price Prediction</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Arimo', sans-serif;
+      background: #e5ebe6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .login {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    h3 {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>California House Price Prediction</h1>
+
+    <form action="{{ url_for('predict_data') }}" method="POST">
+      <input type="text" name="MedInc" placeholder="Median Income" required /><br>
+      <input type="text" name="HouseAge" placeholder="House Age" required /><br>
+      <input type="text" name="AveRooms" placeholder="Average Rooms" required /><br>
+      <input type="text" name="AveBedrms" placeholder="Average Bedrooms" required /><br>
+      <input type="text" name="Population" placeholder="Population" required /><br>
+      <input type="text" name="AveOccup" placeholder="Average Occupancy" required /><br>
+      <input type="text" name="Latitude" placeholder="Latitude" required /><br>
+      <input type="text" name="Longitude" placeholder="Longitude" required /><br>
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+      <br>
+      <h3>{{ prediction_text }}</h3>
+    {% endif %}
+  </div>
+</body>
+</html>
